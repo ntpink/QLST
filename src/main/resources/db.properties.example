@@ -1,0 +1,3 @@
+db.url=jdbc:mysql://localhost:3306/qlst?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Ho_Chi_Minh
+db.username=your_mysql_username
+db.password=your_mysql_password

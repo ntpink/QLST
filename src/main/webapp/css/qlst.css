@@ -1,0 +1,32 @@
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    background: #fff;
+    color: #111;
+    font-family: "Times New Roman", serif;
+    font-size: 18px;
+}
+.page { width: 94%; max-width: 1200px; margin: 22px auto; border: 1px solid #999; padding: 18px 24px 36px; }
+h1 { text-align: center; margin: 0 0 12px; font-size: 42px; }
+h2 { text-align: center; margin: 10px 0 26px; font-size: 30px; }
+hr { border: 0; border-top: 1px solid #999; margin: 10px 0 28px; }
+.actions { display: flex; justify-content: center; gap: 36px; margin: 34px 0; }
+button, .button { font: inherit; padding: 8px 28px; border: 1px solid #888; background: #f2f2f2; color: #111; text-decoration: none; cursor: pointer; }
+.form-table, .report-table, .transaction-table, .choice-table { width: 100%; border-collapse: collapse; }
+.form-table { max-width: 570px; margin: auto; }
+th, td { border: 1px solid #999; padding: 8px 12px; text-align: left; }
+.form-table th { width: 34%; }
+input { font: inherit; padding: 5px 8px; width: 100%; }
+.required-mark { color: #c00; font-weight: bold; }
+.message { text-align: center; margin: 14px 0; }
+.error { color: #a00; }
+.success { color: #064; }
+.report-filter { display: flex; align-items: end; gap: 28px; margin-bottom: 26px; }
+.report-filter label { display: block; }
+.report-filter input { width: 185px; }
+.report-table th, .report-table td, .transaction-table th, .transaction-table td { text-align: center; }
+.report-table td:nth-child(3), .transaction-table td:nth-child(4) { text-align: left; }
+.choice-table { max-width: 720px; margin: auto; }
+.choice-table td:first-child { width: 55px; text-align: center; }
+.center { text-align: center; }
+.inline-form { display: inline; }

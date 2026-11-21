@@ -33,7 +33,7 @@ public class RegisterMemberServlet4 extends HttpServlet {
             return;
         }
         try (Connection connection = dao.getConnection()) {
-            if (memberDAO.getMemberByUsername(connection, username) != null) {
+            if (memberDAO.getMemberByUserName(connection, username) != null) {
                 show(request, response, "Tên đăng nhập đã tồn tại.", "error"); return;
             }
             if (customerDAO.getCustomerByPhone(phone) != null) {
@@ -45,10 +45,10 @@ public class RegisterMemberServlet4 extends HttpServlet {
             connection.setAutoCommit(false);
             try {
                 Member4 member = new Member4(username, password);
-                memberDAO.insertMember(connection, member);
+                memberDAO.registerMember(connection, member);
                 Customer4 customer = new Customer4(name, phone, email, address);
                 customer.setMemberId(member.getId());
-                customerDAO.insertCustomer(connection, customer);
+                customerDAO.createCustomer(connection, customer);
                 connection.commit();
                 show(request, response, "Đăng ký thành công.", "success");
             } catch (Exception e) {

@@ -44,7 +44,7 @@ public class CustomerRevenueServlet4 extends HttpServlet {
         if (customer == null) throw new IllegalArgumentException("Không tìm thấy khách hàng " + customerId);
         request.setAttribute("customerId", customerId); request.setAttribute("customerName", customer.getName());
         request.setAttribute("startDate", text(start)); request.setAttribute("endDate", text(end));
-        request.setAttribute("transactions", transactionDAO.getTransactionsByCustomer(customerId, start, end));
+        request.setAttribute("transactions", transactionDAO.getTransactionByCustomer(customerId, start, end));
         request.getRequestDispatcher("/CustomerTransactionsView4.jsp").forward(request, response);
     }
 

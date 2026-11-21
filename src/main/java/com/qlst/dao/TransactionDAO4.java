@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TransactionDAO4 extends DAO4 {
-    public List<Transaction4> getTransactionsByCustomer(int customerId, LocalDate startDate, LocalDate endDate) throws SQLException {
+    public List<Transaction4> getTransactionByCustomer(int customerId, LocalDate startDate, LocalDate endDate) throws SQLException {
         StringBuilder sql = new StringBuilder("SELECT id, transactionDate, totalAmount, status, channel FROM tbltransaction4 WHERE tblCustomer4memberId = ?");
         List<Object> parameters = new ArrayList<>();
         parameters.add(customerId);

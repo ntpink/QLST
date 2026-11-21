@@ -23,7 +23,7 @@ public class CustomerDAO4 extends DAO4 {
         }
     }
 
-    public void insertCustomer(Connection connection, Customer4 customer) throws SQLException {
+    public void createCustomer(Connection connection, Customer4 customer) throws SQLException {
         String sql = "INSERT INTO tblcustomer4 (memberId, name, phone, email, address) VALUES (?, ?, ?, ?, ?)";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, customer.getMemberId());
